@@ -2,18 +2,17 @@
 const express = require('express');
 
 // create an instance of express && create env port
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
+// routes
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
-// Express creates routes for all files in the public folder
-app.use(express.static('public'));
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// routes
-require('./routes/apiRoutes')(app);
-require('./routes/htmlRoutes')(app);
+// Express creates routes for all files in the public folder
+app.use(express.static('public'));
 
 // listener
 app.listen(PORT, () => {
