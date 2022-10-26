@@ -30,4 +30,18 @@ module.exports = (app) => {
     fs.writeFileSync(`./db/db.json`, JSON.stringify(db));
     res.json(db);
   });
+
+  // DELETE a note by id
+  app.delete(`/api/notes/:id`, (req, res) => {
+    // read db.json
+    const db = JSON.parse(
+      fs.readFileSync(path.join(__dirname, `../db/db.json`), 'utf8')
+    );
+
+    // filter out deleted note
+    const deleteNote = db.filter((note) => note.id !== req.params.id);
+    // rewrite db.json
+    fs.writeFileSync(`./db/db.json`, JSON.stringify(deleteNote));
+    res.json(deleteNote);
+  });
 };
