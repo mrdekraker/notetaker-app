@@ -11,7 +11,7 @@ const { notes } = require('../../db/db.json');
 // GET Route for retrieving all the notes
 router.get('/notes', (req, res) => {
   const results = notes;
-  if (results) {
+  if (req.query) {
     res.json(results);
   } else {
     res.send(404);
