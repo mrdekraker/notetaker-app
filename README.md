@@ -1,13 +1,13 @@
 # [GitHub: mrdekraker](https://github.com/mrdekraker/notetaker-app) -- Note Taker App
 
-<!-- data size badge -->
-
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mrdekraker/notetaker-app?style=for-the-badge)
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-100%25-yellow)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## [Heroku Deployment](https://arcane-eyrie-61704.herokuapp.com/)
+---
+
+# [Heroku arcane-eyrie-61704: Deployment](https://arcane-eyrie-61704.herokuapp.com/)
 
 ## Table of Contents
 
