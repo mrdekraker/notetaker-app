@@ -1,5 +1,3 @@
-const { response } = require('express');
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -42,17 +40,7 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  })
-    .then(() => {
-      if (response.ok) {
-        return response.json();
-      }
-      alert(`Error: ${response.statusText}`);
-    })
-    .then((postResponse) => {
-      console.log(postResponse);
-      alert('Thank you for your note!');
-    });
+  });
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
